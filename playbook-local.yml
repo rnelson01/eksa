@@ -1,10 +1,10 @@
 ---
-  - name: "Playing with Ansible and Git"
+  - name: "EKS-A config Ansible and Git"
     hosts: localhost
     connection: local 
     tasks:
 
-    - name: "just execute a ls -lrt command"
+    - name: "execute a ls -lrt command"
       shell: "ls -lrt"
       register: "output"
 
