@@ -5,6 +5,7 @@
     tasks:
 
     - name: "execute a ls -lrt command"
+      shell: "echo <+matrix.site_no>"
       shell: "ls -lrt"
       register: "output"
 
