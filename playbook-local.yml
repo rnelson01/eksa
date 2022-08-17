@@ -6,7 +6,9 @@
 
     - name: "execute a ls -lrt command"
       shell: "ls -lrt"
-      register: "output"
+      register: "output1"
+      
+    - debug: var=output1.stdout_lines
       
     - name: "site info"
       shell: "echo <+matrix.site_no>"
