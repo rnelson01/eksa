@@ -11,7 +11,7 @@
     - debug: var=output1.stdout_lines
       
     - name: "site info"
-      shell: "echo '<+matrix.site_no>'"
+      shell: "echo $site_no "
       register: "output"
 
     - debug: var=output.stdout_lines
