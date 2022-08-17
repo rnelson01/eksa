@@ -5,8 +5,11 @@
     tasks:
 
     - name: "execute a ls -lrt command"
-      shell: "echo <+matrix.site_no>"
       shell: "ls -lrt"
+      register: "output"
+      
+    - name: "site info"
+      shell: "echo <+matrix.site_no>"
       register: "output"
 
     - debug: var=output.stdout_lines
