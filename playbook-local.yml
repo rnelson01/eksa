@@ -10,8 +10,6 @@
       
     - debug: var=output1.stdout_lines
       
-    - name: "site info"
-      shell: "echo $site_no "
-      register: "output"
-
-    - debug: var=output.stdout_lines
+    - name: Basic usage
+      ansible.builtin.debug:
+        msg: "'{{ lookup('ansible.builtin.env', 'site_no') }}' is the site number."
